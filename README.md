@@ -1,19 +1,7 @@
 # sprint-1----class-skeleton----version-1.0
 # consits of 5 classes :Home_Owner,SmartBed,SmartGyser,EnvironmentSensor,WaterHeater.
 # we need to make use of virtual class.
-class EnvironmentSensor
-{
-public:virtual bool isAwake()
-};
-
-class WaterHeater
-{
-  public:
-          virtual void setTargetTemp(int temp)=0;
-          virtual int getTargetTemp() const =0;
-          virtual void turnOn() const =0;
-          virtual void turnOff() const =0;
- };         
+         
 # 1. SmartBed will give boolean value if owner is out of bed or sleeping.We are assuming that its having a smart floormat that detects/senses the steping out of person from bed.
 class SmartBed : public EnvironmentSensor
 {
