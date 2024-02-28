@@ -1,0 +1,16 @@
+ class HomeOwner
+  {
+    public:
+      void setTemp(int temp)
+      {
+        if(temp<30 || temp >60)
+        {
+          cout<<"Enter valid Temperature"<<endl;
+        }
+        else
+        {  Temp =temp; }
+      } 
+       int Temp;  
+       int getTemp() const
+       { return Temp; }
+ };  
