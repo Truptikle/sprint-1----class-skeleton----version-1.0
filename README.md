@@ -5,24 +5,7 @@
 # 1. SmartBed will give boolean value if owner is out of bed or sleeping.We are assuming that its having a smart floormat that detects/senses the steping out of person from bed.
 
  # 2. Home_Owner will provide some desired temperature. 
-  class HomeOwner
-  {
-    public:
-      void setTemp(int temp)
-      {
-        if(temp<30 || temp >60)
-        {
-          cout<<"Enter valid Temperature"<<endl;
-        }
-        else
-        {  Temp =temp; }
-      } 
-       int Temp;  
-       int getTemp() const
-       { return Temp; }
- };  
-
-   # 3. SmartGyser inherit classes EnvironmentalSensor,WaterHeater.
+ # 3. SmartGyser inherit classes EnvironmentalSensor,WaterHeater.
   class SmartGeyser
   {
       public:
