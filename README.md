@@ -3,44 +3,7 @@
 # we need to make use of virtual class.
          
 # 1. SmartBed will give boolean value if owner is out of bed or sleeping.We are assuming that its having a smart floormat that detects/senses the steping out of person from bed.
-class SmartBed : public EnvironmentSensor
-{
-  public:
-  //return true if owner is out of bed
-  bool isAwake() const override
-  {
-    bool isStepoutdetected=false;
-    if(isStepoutdetected)
-    {
-      return true;
-    }
-    else
-    {
-      return false;
-    }
-  }
- }; 
 
- class Geyser : public WaterHeater
- {
-   public:
-           void setTargetTemp(int temp) override 
-           { targetTemp = temperature; }
-            int getTargetTemp() const override
-            { 
-            return targetTemp;
-            }
-            void turnOn() const override 
-            {
-              cout << " geyser on" <<endl;
-           }
-           void turnOff() const override
-           {
-             cout << " geyser off." <<endl;
-           }
-    private:
-    int targetTemperature = 0; // Target temperature for the geyser
-};
  # 2. Home_Owner will provide some desired temperature. 
   class HomeOwner
   {
