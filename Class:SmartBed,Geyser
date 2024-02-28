@@ -1,0 +1,38 @@
+class SmartBed : public EnvironmentSensor
+{
+  public:
+  //return true if owner is out of bed
+  bool isAwake() const override
+  {
+    bool isStepoutdetected=false;
+    if(isStepoutdetected)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
+ }; 
+
+ class Geyser : public WaterHeater
+ {
+   public:
+           void setTargetTemp(int temp) override 
+           { targetTemp = temperature; }
+            int getTargetTemp() const override
+            { 
+            return targetTemp;
+            }
+            void turnOn() const override 
+            {
+              cout << " geyser on" <<endl;
+           }
+           void turnOff() const override
+           {
+             cout << " geyser off." <<endl;
+           }
+    private:
+    int targetTemperature = 0; // Target temperature for the geyser
+};
