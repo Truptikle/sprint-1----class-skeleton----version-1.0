@@ -38,17 +38,19 @@ class SmartBed : public EnvironmentSensor
    public:
            void setTargetTemp(int temp) override 
            { targetTemp = temperature; }
-            int getTargetTemp() const override { return targetTemp; }
-
-            void turnOn() const override {
-      cout << " geyser on" <<endl;
-    }
-
-    void turnOff() const override {
-       cout << " geyser off." <<endl;
-    }
-
-private:
+            int getTargetTemp() const override
+            { 
+            return targetTemp;
+            }
+            void turnOn() const override 
+            {
+              cout << " geyser on" <<endl;
+           }
+           void turnOff() const override
+           {
+             cout << " geyser off." <<endl;
+           }
+    private:
     int targetTemperature = 0; // Target temperature for the geyser
 };
  # 2. Home_Owner will provide some desired temperature. 
@@ -64,10 +66,10 @@ private:
         else
         {  Temp =temp; }
       } 
-     int Temp;  
-     int getTemp() const
-     { return Temp; }
-   };  
+       int Temp;  
+       int getTemp() const
+       { return Temp; }
+ };  
 
    # 3. SmartGyser inherit classes EnvironmentalSensor,WaterHeater.
   class SmartGeyser
@@ -118,26 +120,14 @@ private:
          else
          {
              cout<<"User not awake"<<endl;
-          }
+         }
    }
    private :
    const EnvironmentSensor& sensor;
    const WaterHeater& heater;
 };   
 
-# Test.cpp
-#include<iostream>
-int main()
-{
-  SmartBed sensor;
-  Geyser heater;
 
-  SmartGeyser smartGeyser(sensor,heater);
-
-  smartGeyser.start();
-
-  return 0;
-}  
    
                        
 
