@@ -1,3 +1,5 @@
+#class for smartBed, Geyser which checks if person is out of bed,geyser sets temperature.save it as .cpp
+
 class SmartBed : public EnvironmentSensor
 {
   public:
