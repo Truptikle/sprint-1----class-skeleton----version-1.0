@@ -6,61 +6,7 @@
 
  # 2. Home_Owner will provide some desired temperature. 
  # 3. SmartGyser inherit classes EnvironmentalSensor,WaterHeater.
-  class SmartGeyser
-  {
-      public:
-              SmartGeyser(const EnvironmentSensor& sensor, const 
-             WaterHeater& heater) : sensor(sensor), heater(heater) {}
-        void start()
-        {
-          while (true)
-          {
-            if (Sensor.isAwake())
-            {
-              int Temp = 30;
-              if (heater.getTargetTemp()!= Temp)
-              {
-                if(true)
-                {
-                  //check pressure using some boolean condition,if its true
-                  if(true)
-                  { 
-                    heater.setTargetTemp(Temp);
-                    heater.turnOn();
-                    //check target temp with current 
-                    while(true)
-                   {
-                       int currTemp=0;
-                       //to provide some delay
-                       this_thread::sleep_for(chrono::seconds(1));
-
-                       if(currTemp >= Temp)
-                       {
-                         heater.turnOff();
-                         break;
-                       }
-                    }
-                }
-                else
-                {
-                  cout<<"Geyser not activated"<<endl;
-                }
-             }
-             else
-             {
-                 cout<<"Geyser  activated at set Temp"<<endl;
-             }
-         }
-         else
-         {
-             cout<<"User not awake"<<endl;
-         }
-   }
-   private :
-   const EnvironmentSensor& sensor;
-   const WaterHeater& heater;
-};   
-
+  
 
    
                        
