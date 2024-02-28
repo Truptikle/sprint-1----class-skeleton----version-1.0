@@ -1,4 +1,6 @@
- class HomeOwner
+#class for HomeOwner where owner sets some predefinerd temperature.save it as .cpp
+
+class HomeOwner
   {
     public:
       void setTemp(int temp)
