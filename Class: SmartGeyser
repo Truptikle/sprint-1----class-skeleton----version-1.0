@@ -1,3 +1,5 @@
+#class for smartGeyser which includes heater,environmentsensor.save it as .cpp
+
 class SmartGeyser
   {
       public:
